@@ -1,3 +1,9 @@
+.texto-top{
+    text-align: center;
+}
+
+
+
 body{
     background-image: url("Imagens/receitas/Fundo.jpg");
 }
@@ -5,4 +11,8 @@ body{
 .imagembanofe{
    
     max-width: 200px; 
-}                 
+}          
+
+.dicas{
+    text-align: center;
+}
