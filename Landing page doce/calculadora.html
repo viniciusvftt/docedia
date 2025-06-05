@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Calculadora de bolo</title>
+  <style>
+    body {
+      
+      background: #f4f4f4;
+      padding: 40px;
+      text-align: center;
+      font-family: sans-serif;
+    background-image: url("Imagens/index/Fundo.jpg");
+    }
+    table {
+      margin: 0 auto;
+      border-collapse: collapse;
+      width: 400px;
+    }
+    td, th {
+      border: 1px solid #ccc;
+      padding: 12px;
+    }
+    th {
+      background-color: #007BFF;
+      color: white;
+    }
+    input {
+      width: 80px;
+      padding: 5px;
+      text-align: center;
+    }
+    input[readonly] {
+      background-color: #eee;
+      border: 1px solid #ccc;
+    }
+    #resultado {
+      font-weight: bold;
+      font-size: 1.2em;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>     <div class="teste">
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+  <h2>Calculadora de bolo</h2>
+
+  <table>
+    <tr>
+      <th></th>
+      <th>Gramas</th>
+      <th>Pessoas</th>
+    </tr>
+    <tr>
+      <th>Padrão</th>
+      <td><input type="number" id="a" value="1000" readonly /></td>
+      <td><input type="number" id="b" value="8" readonly /></td>
+    </tr>
+    <tr>
+      <th>Quantidade em gramas escolhida</th>
+      <td><input type="number" id="c" placeholder="C" /></td>
+      <td><input type="text" id="x" placeholder="X" readonly /></td>
+    </tr>
+  </table>
+  <br>
+
+  <button onclick="calcular()">Calcular</button>
+
+  <div id="resultado"></div>
+
+  <script>
+    function calcular() {
+      const a = 1000; // fixo
+      const b = 8;    // fixo
+      const c = parseFloat(document.getElementById("c").value);
+      const xField = document.getElementById("x");
+      const resultadoDiv = document.getElementById("resultado");
+
+      if (isNaN(c)) {
+        resultadoDiv.innerText = "Digite um valor válido para C.";
+        xField.value = "";
+        return;
+      }
+
+      const x = (b * c) / a;
+      xField.value = x.toFixed(2);
+      resultadoDiv.innerText = `A quantidade atende aproximadamente: ${x.toFixed(2)} pessoas`;
+    }
+  </script>
+
+
+
+</body>
+</html>
