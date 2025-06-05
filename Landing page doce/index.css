@@ -1,0 +1,115 @@
+
+body {
+    font-family: sans-serif;
+    background-image: url("Imagens/index/Fundo.jpg");
+}
+a {
+    font-family: sans-serif;
+    color: rgb(199, 66, 176);
+    font-size: 200%;
+}
+
+       
+.imagem-fixa{
+    text-align: center
+}
+
+.sobrenos{
+    text-align: center
+
+}
+
+.contato{
+    text-align: left;
+    
+    margin-left: 5cm;
+    margin-bottom: 2cm;
+    font-weight: bold;
+
+
+
+    
+
+}
+.instagram{
+    text-align: center;
+    margin-top: -3cm;
+    margin-bottom: 2cm;
+    font-weight: bold;
+    margin-left: -6cm;
+
+}
+.receitas{
+    text-align: right;
+    margin-top: -3cm;
+    margin-right: 10cm;
+    margin-bottom: 2cm;
+    font-weight: bold; 
+    
+}
+.calculadora{text-align: center;
+    margin-top: -3cm;
+    margin-right: 7cm;
+    margin-bottom: 2cm;
+    font-weight: bold; 
+    padding-top: 3cm;
+
+}
+
+
+
+
+
+
+.btn:link,
+.btn:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 15px 15px;
+    display: inline-block;
+    border-radius: 100px;
+    transition: all .2s;
+    position: absolute;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.btn:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn-white {
+    background-color: #fff;
+    color: #777;
+}
+
+.btn::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all .4s;
+}
+
+.btn-white::after {
+    background-color: #fff;
+}
+
+.btn:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0;
+}
+
+.btn-animated {
+    animation: moveInBottom 5s ease-out;
+    animation-fill-mode: backwards;
+}
